@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(126, 125, 125);
+    font-family: 'Roboto', sans-serif;
+    background: #d3d3d3 url('./img/background.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    margin: 40px auto;
+    text-align: center;
+    font-size: 45px;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    place-items: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 20px;
+    margin: 15px auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    border: 2px solid #000;
+    border-radius: 16px;
+    max-width: 22vw;
+    height: 500px;
+    transition: all .3s ease-in-out;
+    background: #333;
+    color: #d3d3d3;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 6px 5px #000;
+}
+.character__img {
+    align-self: center;
+    overflow: hidden;   
+}
+
+.character__img img {
+    border-radius: 50%;
+    border: 5px solid #000;
+}
+.character__name{
+    font-size: 18px;
+}
+footer {
+    background:rgb(126, 125, 125);
+    padding: 5px;
+}
+footer p {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+    margin: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: silver;
+    transition: all .3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+
