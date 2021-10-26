@@ -16,6 +16,8 @@ Handle the data as we like inside the html structure.
 Made cards for every character from the show, just 20 characters rendered.
 Styled the website with some basic CSS.
 
+## Project online
+[Rick and Morty WIki by JQARPAIA](https://rick-and-morty-wiki-by-josearpaiaq.netlify.app/)
 ## References
 [Rick and Morty API](https://rickandmortyapi.com/)
 
