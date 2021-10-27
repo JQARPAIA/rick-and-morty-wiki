@@ -30,13 +30,13 @@ h1 {
 
 .card {
     padding: 20px;
-    margin: 15px auto;
+    margin: 15px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     border: 2px solid #000;
     border-radius: 16px;
-    max-width: 22vw;
+    max-width: 95%;
     height: 500px;
     transition: all .3s ease-in-out;
     background: #333;
@@ -48,11 +48,14 @@ h1 {
     box-shadow: 8px 6px 5px #000;
 }
 .character__img {
+    display: flex;
+    justify-content: center;
     align-self: center;
     overflow: hidden;   
 }
 
 .character__img img {
+    width: 90%;
     border-radius: 50%;
     border: 5px solid #000;
 }
@@ -60,25 +63,51 @@ h1 {
     font-size: 18px;
 }
 footer {
-    background:rgb(126, 125, 125);
+    background:rgb(58, 75, 40);
     padding: 5px;
 }
 footer p {
     text-align: center;
     color: #fff;
-    text-shadow: 0 0 2px #000;
+    text-shadow: 0 0 1px #000;
     margin: 10px;
 }
 
 footer a {
     text-decoration: none;
     color: silver;
-    transition: all .3s;
+    transition: all .5s;
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: #fff;
+    color: rgb(36, 39, 34);
+}
+
+@media screen and (max-width: 1100px) {
+    #gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 500px) {
+    #gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card {
+        width: 80%;
+    }
 }
 
 

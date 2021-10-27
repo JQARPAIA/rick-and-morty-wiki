@@ -7,8 +7,8 @@ async function getCharacters() {
     return charactersData
 }
 
-const charactersInfo = async () => {
-    let res = await fetch('https://rickandmortyapi.com/api/character')
+const charactersInfo = async (url = 'https://rickandmortyapi.com/api/character/') => {
+    let res = await fetch(url)
     .then(res => res.json())
     .then(data => {
         data.results.map(character => {
