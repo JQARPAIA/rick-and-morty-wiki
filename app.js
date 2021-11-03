@@ -1,18 +1,14 @@
 const gallery = document.getElementById('gallery');
+let page = 1;
 
-async function getCharacters() {
-    const characters = await fetch('https://rickandmortyapi.com/api/character')
-    const charactersData = await characters.json()
-    //console.log(CharacterData)
-    return charactersData
-}
-
-const charactersInfo = async (url = 'https://rickandmortyapi.com/api/character/') => {
+const charactersInfo = async (page = 1) => {
+    //num = num > 34 ? 0 : num; 
+    let url = `https://rickandmortyapi.com/api/character/?page=${page}`;
     let res = await fetch(url)
     .then(res => res.json())
     .then(data => {
         data.results.map(character => {
-            gallery.innerHTML += `
+            gallery.innerHTML += /*html*/`
             <div class="card">
                 <div class="character__img">
                     <img src="${character.image}" alt="${character.name}" title=${character.name}>
@@ -30,13 +26,29 @@ const charactersInfo = async (url = 'https://rickandmortyapi.com/api/character/'
                     Ubicación actual: <b>${character.location.name}</b>
                 </div>
             </div>`; 
+            console.log("Success!! yei!!")
+            console.log(data.info.next)
         })
-        console.log("Success!! yei!!")
-        console.log(data.results)
         return data.results
     })
     .catch(e => {
         console.log(e)
     })  
 }
+
 charactersInfo();
+
+const nextPage = () => {
+    page++
+    console.log(page)
+    page = page > 34 ? 34 : page; 
+    gallery.innerHTML = ""
+    charactersInfo(page)
+}
+
+const previousPage = () => {
+    page--
+    console.log(page)
+    gallery.innerHTML = ""
+    charactersInfo(page);
+}

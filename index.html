@@ -16,30 +16,20 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <!-- Title -->
-    <title>Rick and morty app</title>
+    <title>Rick and morty wiki</title>
 </head>
 <body>
     <h1>Rick and Morty Wiki</h1>
-    <div id="gallery">
-        <!-- <div class="card">
-            <div class="character__img">
-                <img src="" alt="">
-            </div>
-            <div class="character__name">
-
-            </div>
-            <div class="character__status">
-
-            </div>
-            <div class="character__origin">
-
-            </div>
-            <div class="character__location">
-
-            </div>
-        </div> -->
+    <div class="btn-container">
+        <button class="btn" id="back" onclick="previousPage();"><< Pagina anterior</button>
+        <button class="btn" id="foward" onclick="nextPage();">Siguente pagina >> </button>
     </div>
-
+    <div id="gallery">
+    </div>
+    <div class="btn-container">
+        <button class="btn" id="back" onclick="previousPage();"><< Pagina anterior</button>
+        <button class="btn" id="foward" onclick="nextPage();">Siguente pagina >> </button>
+    </div>
     <footer>
         <p>
             Creado por <a href="https://josearpaiaq.netlify.app/">Jose Arpaia.</a> | Los datos fueron proporcionados por el <a href="https://rickandmortyapi.com/">API de Rick and Morty</a>
